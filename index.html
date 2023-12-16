@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potifolio</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        ul{
+            margin-left: 10px;
+            list-style: none;
+            margin-top: 80px;
+            
+            }
+
+        li{
+                padding: 10px;
+            }
+        img{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #chec{
+            display: none;
+            
+        }
+        #chec:checked~nav{
+            transform: translate(300px);/*ação de movimenta(eixo x) da esquerda a direita o nav.*/
+            transition: all .5s;/*determina o tempo que o menu vai aparecer*/
+            
+        }
+        .menu{
+            background: linear-gradient(50deg,#e206b2,#cd1fdd,#e094f7); /*0.5 da uma transparencia na barra do menu */     
+            width: 300px;/*largura do menu*/
+            height: 100vh;/*altura do menu*/
+            position:absolute;/*retira a barra de rolagem*/
+            left: -300px;/*recolhe o menu de acordo com height*/
+        }
+        #link{text-decoration: none;/*retira o sublinado do link*/
+            color: black;
+            padding: 10px 5px;/*determina a largura e altura do hover*/
+            display: block; /*colocar o hover até o final da linha*/
+        }
+        #link:hover{
+            background-color: #93b3ee;
+
+        }  
+        #label{
+            position: absolute;/*sobe o background do menu*/
+            z-index: 1;/*para o botão não ficar por baixa do background, esse comando colocar o botao por cima */
+        }
+       
+
+
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="chec"><! isso que faz o click do menu ativa o menu!>
+    <label id="label" for="chec">
+        <img src="img/menu.png" id="image" width="30px
+        " alt=""> 
+    </label>
+   <nav class="menu">
+        <ul>
+            <li><a href="#" id="link">Home</a></li>
+            <li><a href="#" id="link">Sobre</a></li>
+            <li><a href="#" id="link">Contato</a></li>
+        </ul>
+   </nav>
+        
+    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script >
+</body>
+</html>
